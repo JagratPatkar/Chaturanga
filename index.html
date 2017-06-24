@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chess</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+
+            .white
+            {
+                height: 85px;
+                width: 85px;
+                background-color: white;
+                font-size:50px;
+                text-align:center;
+                display: table-cell;
+                vertical-align:middle;
+            }
+            .black
+            {
+                height: 75px;
+                width: 75px;
+                background-color: slategray;
+                font-size:50px;
+                text-align:center;
+                display: table-cell;
+                vertical-align:middle;
+            }
+
+            table
+            {
+                border-style: solid;
+                border-width: 1px;
+                border-color:slategray;
+            }
+
+
+        </style>
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+            var clear;
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.innerHTML);
+                clear = ev;
+            }
+
+            function drop(ev) {
+                ev.preventDefault();
+                if (ev.target.childNodes[0].innerHTML == "")
+                {
+                    var data = ev.dataTransfer.getData("text");
+                    ev.target.childNodes[0].innerHTML = data;
+                    clear.target.innerHTML = "";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="white" id="a8" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9820;</div></td>
+                <td class="black" id="b8" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9822;</div></td>
+                <td class="white" id="c8" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9821;</div></td>
+                <td class="black" id="d8" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9819;</div></td>
+                <td class="white" id="e8" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9818;</div></td>
+                <td class="black" id="f8" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9821;</div></td>
+                <td class="white" id="g8" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9822;</div></td>
+                <td class="black" id="h8" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9820;</div></td>
+            </tr>
+            <tr>
+                <td class="black" id="a7" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9823;</div></td>
+                <td class="white" id="b7" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9823;</div></td>
+                <td class="black" id="c7" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9823;</div></td>
+                <td class="white" id="d7" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9823;</div></td>
+                <td class="black" id="e7" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9823;</div></td>
+                <td class="white" id="f7" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9823;</div></td>
+                <td class="black" id="g7" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9823;</div></td>
+                <td class="white" id="h7" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9823;</div></td>
+            </tr>
+            <tr>
+                <td class="white" id="a6" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="b6" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="c6" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="d6" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="e6" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="f6" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="g6" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="h6" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+            </tr>
+            <tr>
+                <td class="black" id="a5" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="b5" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="c5" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="d5" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="e5" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="f5" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="g5" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="h5" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+            </tr>
+            <tr>
+                <td class="white" id="a4" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="b4" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="c4" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="d4" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="e4" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="f4" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="g4" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="h4" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+            </tr>
+            <tr>
+                <td class="black" id="a3" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="b3" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="c3" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="d3" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="e3" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="f3" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="black" id="g3" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+                <td class="white" id="h3" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)"></div></td>
+            </tr>
+            <tr>
+                <td class="white" id="a2" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9817;</div></td>
+                <td class="black" id="b2" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9817;</div></td>
+                <td class="white" id="c2" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9817;</div></td>
+                <td class="black" id="d2" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9817;</div></td>
+                <td class="white" id="e2" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9817;</div></td>
+                <td class="black" id="f2" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9817;</div></td>
+                <td class="white" id="g2" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9817;</div></td>
+                <td class="black" id="h2" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9817;</div></td>
+            </tr>
+            <tr>
+                <td class="black" id="a1" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9814;</div></td>
+                <td class="white" id="b1" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9816;</div></td>
+                <td class="black" id="c1" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9815;</div></td>
+                <td class="white" id="d1" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9813;</div></td>
+                <td class="black" id="e1" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9812;</div></td>
+                <td class="white" id="f1" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9815;</div></td>
+                <td class="black" id="g1" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9816;</div></td>
+                <td class="white" id="h1" ondrop="drop(event)" ondragover="allowDrop(event)"><div draggable="true" ondragstart="drag(event)">&#9814;</div></td>
+            </tr>
+        </table>
+        <!--        <form>
+                    Departure: <input type="text" name="Departure" id="departure"><br>
+                    Arrival: <input type="text" name="Arrival" id="arrival"><br>
+                    <input type="button" value="Submit"  onclick="airCraft()">
+                </form>-->
+
+    </body>
+</html>
