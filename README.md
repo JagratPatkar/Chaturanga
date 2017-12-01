@@ -1,2 +1,2 @@
 # ChessEngine
-A Chess game in Javascript HTML5 
+A basic Chess game in Javascript HTML5 
